@@ -1,14 +1,14 @@
-#Practica 0
-##Objetivo:
+# Practica 0
+## Objetivo:
 Compilar y correr xv6
 
-##Herramientas
+## Herramientas
 gcc -> compilador
 git -> compartir el codigo
 make -> automatizar
 qemu -> para crear la maquina virtual
 
-###Conceptos
+### Conceptos
 Sistema operativo dos partes:kernel y las aplicaciones de sistema 
 
 ## Que aprendí

@@ -12,3 +12,7 @@ qemu -> para crear la maquina virtual
 Sistema operativo dos partes:kernel y las aplicaciones de sistema 
 
 ## Que aprendí
+
+
+## Commit
+https://github.com/eduardoalonso/SO-gp2/commit/9e9bb29c0b1bef2bfdd45f9b5126e7aa8458bdbd

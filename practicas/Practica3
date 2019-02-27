@@ -1,12 +1,12 @@
-#Objetivo
+# Objetivo
 modificar el programa init para que muestre un programa de bienvenida
 
-#Herramientas
+# Herramientas
 got
 make
 git
 
-#Conceptos
+# Conceptos
 
 1) Proceso
 + Instancia de un programa

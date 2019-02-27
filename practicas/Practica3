@@ -1,12 +1,12 @@
-# Objetivo
+#Objetivo
 modificar el programa init para que muestre un programa de bienvenida
 
-# Herramientas
+#Herramientas
 got
 make
 git
 
-# Conceptos
+#Conceptos
 
 1) Proceso
 + Instancia de un programa
@@ -31,6 +31,9 @@ git
 + Es el unico proceso que crea el SO
 
 # Que aprendí
+Aprendí que son los procesos, de que sirven y como utilizarlos. Además, otra cosa que aprendí es que
+la inicialización es el proceso de localizar y usar las variables definidas que se usaran en los programas
+de la computadora.
 
 # URL del Commit
 

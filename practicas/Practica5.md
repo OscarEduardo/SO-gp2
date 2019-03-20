@@ -9,7 +9,7 @@ Investigar y practicar diferentes IPC
 
 # Conceptos
 + Procesos cooperativos
-++ dos o más procesos que se comunican con un IPC
+   dos o más procesos que se comunican con un IPC
 
 # URL del commit
 

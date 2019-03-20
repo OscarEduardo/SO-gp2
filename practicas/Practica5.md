@@ -1,11 +1,11 @@
 # Objetivo
 Investigar y practicar diferentes IPC
-+Señales
-+Pipes
-+Memoria compartida (archivos mapeados a memoria)
++ Señales
++ Pipes
++ Memoria compartida (archivos mapeados a memoria)
 
 # Herramientas
-+got
++ got
 
 # Conceptos
 + Procesos cooperativos

@@ -324,8 +324,9 @@ scheduler(void)
 {
   struct proc *p;
   struct cpu *c = mycpu();
+  struct proc *hp;
   c->proc = 0;
-  
+  hp = 0;
   for(;;){
     // Enable interrupts on this processor.
     sti();
@@ -355,6 +356,56 @@ scheduler(void)
   }
 }
 
+int sys_prioritySetter(void){
+	int pid;
+	int prioridad;
+	int cont = 0;
+	
+	argint(0,&pid);
+	argint(1, &prioridad);
+	
+	for(int i =0; i< NPROC;I++){
+		if(ptable.proc[i].state == UNUSED){
+			continue;
+		}else if(ptable.proc[i].pid == pid){
+			cont = i;
+			break;
+		}
+	}
+	if(cont == NPROC){
+		return -cont;
+	}
+	
+	ptable.proc[i].prioridad = prioridad
+	
+	return 0;
+	
+}
+
+int sys_priotityGetter(void){
+	
+	int pid;
+	int cont; 
+	
+	argint(0,&pid);
+
+	for(int i = 0; i < NPROC; i++){
+		if(ptable.proc[i].state == UNUSED) {
+			continue;
+		}else if(ptable.proc[i].pid == pid){
+			cont = i;
+			break;
+		} 
+	}
+
+	if(cont == NPROC) {
+		return -1;
+	}
+	
+	cprintf("La prioridad con valor: %d , es: %d",pid,ptable.proc[i].prioridad);
+	
+	return 0;
+}
 // Enter scheduler.  Must hold only ptable.lock
 // and have changed proc->state. Saves and restores
 // intena because intena is a property of this

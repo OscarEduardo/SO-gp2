@@ -105,6 +105,9 @@ extern int sys_write(void);
 extern int sys_uptime(void);
 extern int sys_shutdown(void);
 extern int sys_reboot(void);
+extern int sys_prioritySetter(void);
+extern int sys_priorityGetter(void);
+extern int sys_date(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -130,6 +133,9 @@ static int (*syscalls[])(void) = {
 [SYS_close]   sys_close,
 [SYS_shutdown] sys_shutdown,
 [SYS_reboot] sys_reboot,
+[SYS_prioritySetter] sys_prioritySetter,
+[SYS_priorityGetter] sys_priorityGetter,
+[SYS_date] sys_date,
 };
 
 void
@@ -141,9 +147,16 @@ syscall(void)
   num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     curproc->tf->eax = syscalls[num]();
+	sysCall(num);
   } else {
     cprintf("%d %s: unknown sys call %d\n",
             curproc->pid, curproc->name, num);
     curproc->tf->eax = -1;
   }
+}
+
+void sysCall(int numero){
+	const char* sysCall[26] = 	{"fork","exit","wait","pipe","read","kill","exec","fstat","chdir","dup","getpid","sbrk","sleep","uptime","open","write","mknod","unlink","link","mkdir","close","shutdown","reboot","setpriority","getpriority", "date"};
+	
+	cprintf("%s -> %d\n", sysCall[num-1], numero);
 }

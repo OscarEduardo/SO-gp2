@@ -19,9 +19,11 @@ got
 + Restaurar el PC y la dirección del nuevo proceso
 
 ## Que aprendí
+El planificador de procesos es el que decide a que proceso se le dan los recursos del procesador y por cuanto tiempo se le dará
+Principalmente lleva los estados de cada proceso y quitarle los recursos al proceso cuando termina su tarea.
 
 ## URL commit
-
+https://github.com/eduardoalonso/SO-gp2/commit/ce8134743c0589175ebd4e4e6bed88045f16f963
 ## Como se relaciona con los conceptos anteriores.
 + llamadas a sistema
 

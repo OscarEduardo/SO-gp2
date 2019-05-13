@@ -10,6 +10,6 @@ gcc git
 
 - Directorios
 - Es un tipo especial de archivo que contiene el nombre de otros archivos y sus referencias.
-#Commit URL
+# Commit URL
 
-#Que aprendí
+# Que aprendí
